@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <div id="lightning"></div>
     <script src="https://clipperventures--s1sales.sandbox.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
 
@@ -12,6 +12,23 @@
               );
             },
            'https://clipperventures--s1sales.sandbox.my.site.com/leadFormsOut/'
+          );
+    </script>
+</html> -->
+<html>
+    <div id="lightning"></div>
+    <script src="https://clipperventures--qasprint1.sandbox.my.salesforce.com/leadFormsOut/lightning/lightning.out.js"></script>
+
+    <script>
+         $Lightning.use("c:leadFormsOutApp", function() {
+            window.$Lightning.createComponent("c:leadFormsOut", {},
+                  "lightning",
+                  function(cmp) {
+                    console.log("LWC component was created");
+                  }
+              );
+            },
+           'https://clipperventures--qasprint1.sandbox.my.salesforce.com/leadFormsOut/'
           );
     </script>
 </html>
