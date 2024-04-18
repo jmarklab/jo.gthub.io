@@ -1,24 +1,6 @@
 <!--
 <html>
     <div id="lightning"></div>
-    <script src="https://clipperventures--staging.sandbox.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
-    <meta name="viewport" content="width=640"/>
-    <script>
-         $Lightning.use("c:leadFormsOutApp", function() {
-            window.$Lightning.createComponent("c:leadFormsOut", {},
-                  "lightning",
-                  function(cmp) {
-                    console.log("LWC component was created");
-                  }
-              );
-            },
-           'https://clipperventures--staging.sandbox.my.site.com/leadFormsOut/'
-          );
-    </script>
-</html>
--->
-<html>
-    <div id="lightning"></div>
     <script src="https://clipperventures.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
     <meta name="viewport" content="width=640"/>
     <script>
@@ -31,6 +13,24 @@
               );
             },
            'https://clipperventures.my.site.com/leadFormsOut/'
+          );
+    </script>
+</html>
+-->
+<html>
+    <div id="lightning"></div>
+    <script src="https://ukdebtexpert--orcadev.sandbox.my.site.com/creditfixform/lightning/lightning.out.js"></script>
+
+    <script>
+         $Lightning.use("c:creditfixWebToLeadAppForm", function() {
+            window.$Lightning.createComponent("c:creditfixWebToLeadForm", {},
+                  "lightning",
+                  function(cmp) {
+                    console.log("LWC component was created");
+                  }
+              );
+            },
+           'https://ukdebtexpert--orcadev.sandbox.my.site.com/creditfixform/'
           );
     </script>
 </html>
