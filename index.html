@@ -1,5 +1,23 @@
 <html>
     <div id="lightning"></div>
+    <script src="https://clipperventures--couat.sandbox.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
+    <meta name="viewport" content="width=640"/>
+    <script>
+         $Lightning.use("c:leadFormsOutApp", function() {
+            window.$Lightning.createComponent("c:leadFormsOut", {},
+                  "lightning",
+                  function(cmp) {
+                    console.log("LWC component was created");
+                  }
+              );
+            },
+           'https://clipperventures--couat.sandbox.my.site.com/leadFormsOut/'
+          );
+    </script>
+</html>
+
+<!-- <html>
+    <div id="lightning"></div>
     <script src="https://clipperventures--codevhf.sandbox.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
     <meta name="viewport" content="width=640"/>
     <script>
@@ -14,7 +32,7 @@
            'https://clipperventures--codevhf.sandbox.my.site.com/leadFormsOut/'
           );
     </script>
-</html>
+</html> -->
 
 
 <!--<html>
