@@ -18,6 +18,7 @@
 
 -->
 
+<!--
 <html>
     <div id="lightning"></div>
     <script src="https://clipperventures--codevhf.sandbox.my.site.com/leadFormsOut/lightning/lightning.out.js"></script>
@@ -35,6 +36,26 @@
           );
     </script>
 </html> 
+-->
+
+<html>
+    <div id="lightning"></div>
+    <script src="https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/lightning/lightning.out.js"></script>
+    <meta name="viewport" content="width=640"/>
+    <script>
+         $Lightning.use("c:corporateFormApp", function() {
+            window.$Lightning.createComponent("c:corporateForm", {},
+                  "lightning",
+                  function(cmp) {
+                    console.log("LWC component was created");
+                  }
+              );
+            },
+           'https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/'
+          );
+    </script>
+</html> 
+
 
 
 <!--<html>
