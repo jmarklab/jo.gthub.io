@@ -64,14 +64,14 @@
                 console.log('@@@ waitForConvertAndLoadLWC');
                 console.log(window.convert);
                 if (window.convert) {
-                    loadLWC();
+                    loadLWC(window.convert);
                 } else {
                     setTimeout(waitForConvertAndLoadLWC, 200);
                 }
             }
 
-            function loadLWC() {
-                $Lightning.use("c:corporateFormApp", function() {
+            function loadLWC(convertObject) {
+                $Lightning.use("c:corporateFormApp", function(convertData: convertObject) {
                     window.$Lightning.createComponent("c:corporateForm", {},
                         "lightning",
                         function(cmp) {
