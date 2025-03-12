@@ -38,7 +38,7 @@
 </html>  -->
 
 
-<html>
+<!-- <html>
     <div id="lightning"></div>
     <script src="https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/lightning/lightning.out.js"></script>
     <meta name="viewport" content="width=640"/>
@@ -54,6 +54,42 @@
            'https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/'
           );
     </script>
+</html> -->
+
+<html>
+    <head>
+        <script src="//cdn-4.convertexperiments.com/v1/js/10007679-10007727.js?environment=production"></script>
+        <script>
+            function waitForConvertAndLoadLWC() {
+                if (window.convert && window.convert.currentData) {
+                    loadLWC();
+                } else {
+                    setTimeout(waitForConvertAndLoadLWC, 200);
+                }
+            }
+
+            function loadLWC() {
+                $Lightning.use("c:corporateFormApp", function() {
+                    window.$Lightning.createComponent("c:corporateForm", {},
+                        "lightning",
+                        function(cmp) {
+                            console.log("LWC component was created");
+                        }
+                    );
+                }, 'https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/');
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                waitForConvertAndLoadLWC();
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="lightning"></div>
+        <script src="https://millbankfx--orcadev.sandbox.my.site.com/corporateAndPrivateForm/lightning/lightning.out.js"></script>
+        <meta name="viewport" content="width=640"/>
+    </body>
 </html>
 
 <!-- <html>
