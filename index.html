@@ -61,6 +61,9 @@
         <script src="//cdn-4.convertexperiments.com/v1/js/10007679-10007727.js?environment=production"></script>
         <script>
             function waitForConvertAndLoadLWC() {
+                console.log('@@@ waitForConvertAndLoadLWC');
+                console.log(window.convert);
+                console.log(window.convert.currentData);
                 if (window.convert && window.convert.currentData) {
                     loadLWC();
                 } else {
