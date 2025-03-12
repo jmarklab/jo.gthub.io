@@ -70,9 +70,11 @@
                 }
             }
 
-            function loadLWC(convertObject) {
-                $Lightning.use("c:corporateFormApp", function(convertData: convertObject) {
-                    window.$Lightning.createComponent("c:corporateForm", {},
+            function loadLWC(convertObject) { // Accept the parameter
+                $Lightning.use("c:corporateFormApp", function() {
+                    window.$Lightning.createComponent("c:corporateForm", {
+                        convertData: convertObject // Correct syntax for passing attributes
+                    },
                         "lightning",
                         function(cmp) {
                             console.log("LWC component was created");
