@@ -63,8 +63,7 @@
             function waitForConvertAndLoadLWC() {
                 console.log('@@@ waitForConvertAndLoadLWC');
                 console.log(window.convert);
-                console.log(window.convert.currentData);
-                if (window.convert && window.convert.currentData) {
+                if (window.convert) {
                     loadLWC();
                 } else {
                     setTimeout(waitForConvertAndLoadLWC, 200);
