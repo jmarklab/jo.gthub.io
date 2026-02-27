@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function waitForConvertAndLoadLWC() {
+                console.log('@@@ waitForConvertAndLoadLWC');
+                console.log(window.convert);
+                if (window.convert) {
+                    loadLWC(window.convert);
+                } else {
+                    setTimeout(waitForConvertAndLoadLWC, 200);
+                }
+            }
+
+            function loadLWC(convertObject) { // Accept the parameter
+                $Lightning.use("c:privateFormApp", function() {
+                    window.$Lightning.createComponent("c:privateForm", {
+                        convertData: convertObject // Correct syntax for passing attributes
+                    },
+                        "lightning",
+                        function(cmp) {
+                            console.log("LWC component was created");
+                        }
+                    );
+                }, 'https://millbankfx--orcauat.sandbox.my.site.com/corporateAndPrivateForm/');
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                waitForConvertAndLoadLWC();
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="lightning"></div>
+        <script src="https://millbankfx--orcauat.sandbox.my.site.com/corporateAndPrivateForm/lightning/lightning.out.js"></script>
+        <meta name="viewport" content="width=640"/>
+    </body>
+</html>
