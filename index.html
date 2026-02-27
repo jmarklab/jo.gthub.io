@@ -56,7 +56,7 @@
     </script>
 </html> -->
 
-<html>
+<!-- <html>
     <div id="lightning"></div>
     <script src="https://millbankfx--orcauat.sandbox.my.site.com/corporateAndPrivateForm/lightning/lightning.out.js"></script>
     <meta name="viewport" content="width=640"/>
@@ -72,6 +72,44 @@
            'https://millbankfx--orcauat.sandbox.my.site.com/corporateAndPrivateForm/'
           );
     </script>
+</html> -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unumuk--cosc.sandbox.my.site.com/referral/lightning/lightning.out.js"></script>
+
+    <script>
+        function loadLightningComponent() {
+            $Lightning.use("c:referralWebFormApp", function() {
+                
+                // 3. Create the LWC
+                $Lightning.createComponent(
+                    "c:referralWebForm", 
+                    {
+                        isSelectionPage: true,
+                        isReferralForm: false,
+                        isSelfReferralForm: false
+                    },
+                    "lightningvf",
+                    function(cmp) {
+                        console.log("LWC component was created successfully");
+                    }
+                );
+            }, 
+            'https://unumuk--cosc.sandbox.my.site.com/referral'
+            );
+        }
+
+        // Initialize when the DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            loadLightningComponent();
+        });
+    </script>
+</head>
+<body>
+    <div id="lightningvf"></div>
+</body>
 </html>
 
 <!-- <html>
